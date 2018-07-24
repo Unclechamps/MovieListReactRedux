@@ -38,12 +38,10 @@ render() {
 
   const mapDispatchToProps = (dispatch) => {
     return {
-      onDeleteMovie : (movie) => {
-        console.log(movie)
-        dispatch({ type : "DELETE_MOVIE", payload : movie})
+      onDeleteMovie : (movie) => dispatch({ type : "DELETE_MOVIE", payload : movie})
 
     }
 }
-}
+
 
 export default connect(mapStateToProps, mapDispatchToProps)(MovieList)

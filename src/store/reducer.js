@@ -1,6 +1,6 @@
 
 const initialState = {
-    movieList : [{ title : "Jaws", imageURL : "https://m.media-amazon.com/images/M/MV5BMmVmODY1MzEtYTMwZC00MzNhLWFkNDMtZjAwM2EwODUxZTA5XkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_.jpg"}],
+    movieList : [],
     titleNew : '',
     posterNew : ''
 }
