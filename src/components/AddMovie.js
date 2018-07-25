@@ -33,7 +33,7 @@ const mapStateToProps = (state) => {
     detail : state.movieList,
     title : state.titleNew,
     poster : state.posterNew
-  }
+  }  
 }
 
 const mapDispatchToProps = (dispatch) => {
