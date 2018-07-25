@@ -12,6 +12,7 @@ render() {
       <div className="links">
         <div><NavLink exact to = "/">Home</NavLink></div>
         <div><NavLink exact to ="/add-movie">Add Movie</NavLink></div>
+        <div><NavLink exact to ="/cart">Cart</NavLink></div>
         <div><NavLink to = "/contact-us">Contact Us</NavLink></div>
       </div>
     </div>

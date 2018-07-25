@@ -3,25 +3,48 @@ import React, {Component} from 'react'
 import '../index.css'
 import { connect } from 'react-redux'
 
+import * as actionCreators from '../store/actionCreators'
+
 class AddMovie extends Component {
 
   constructor(props) {
     super(props)
 
+    this.state = {
+      movie: {}
+    }
+
+  }
+
+  handleTextChange = (e) => {
+    this.setState({
+      movie : {
+        ...this.state.movie,
+        [e.target.name] : e.target.value
+      }
+    })
+
   }
 
 render() {
   return (
+    <div>
+    <h1>Add Movies</h1>
     <div className = "addMovieForm">
     <div>
       <label>Movie Name: </label>
-      <input type="text" id="name" onChange={this.props.addTitleNew} name="name" placeholder="Movie name"/>
+      <input type="text" id="name" onChange={this.handleTextChange} name="title" placeholder="Movie name"/>
     </div>
     <div>
       <label>Poster URL: </label>
-      <input type="text" id="imageURL"  onChange={this.props.addPosterNew} name="imageURL" placeholder="link to the image" />
+      <input type="text" id="imageURL"  onChange={this.handleTextChange} name="imageURL" placeholder="link to the image" />
     </div>
-      <button onClick={() => {this.props.onAddMovie(this.props.title, this.props.poster)}} >Add Movie</button>
+    <div>
+      <label>Price: </label>
+      <input type="text" id="price"  onChange={this.handleTextChange} name="price" placeholder="price of movie" />
+    </div>
+      <button onClick={() => this.props.onSaveMovie(this.state.movie)}>Add Movie</button>
+    </div>
     </div>
     );
   }
@@ -31,17 +54,15 @@ render() {
 const mapStateToProps = (state) => {
   return {
     detail : state.movieList,
-    title : state.titleNew,
-    poster : state.posterNew
-  }  
+  }
 }
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    addTitleNew : (e) => dispatch({type : "ADD_NEW_TITLE", value : e.target.value}),
-    addPosterNew : (e) => dispatch ({type : "ADD_NEW_POSTER", value : e.target.value}),
-    onAddMovie : (title, poster) => dispatch({ type : "ADD_MOVIE", title : title, imageURL : poster}),
+    onSaveMovie : (movie) => dispatch(actionCreators.addMovie(movie)),
     }
   }
 
 export default connect(mapStateToProps, mapDispatchToProps)(AddMovie)
+
+// what connect is doing is that whatever you send global state, is able to being used in the local properties. this.props.movies => local state

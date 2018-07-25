@@ -33,7 +33,7 @@ h1 {
 /* Menu */
 
 .menu {
-  background-color: gray;
+  background-color: #686de0;
   color: white;
   display: flex;
   align-items: center;
@@ -42,11 +42,6 @@ h1 {
 .menu a {
   color: white;
   text-decoration: none;
-  padding: 15px;
-
-}
-
-.menu div {
   padding: 15px;
 }
 
@@ -64,5 +59,13 @@ h1 {
 }
 
 .active {
-  background-color :black;
+  background-color : black;
+}
+
+/* Cart */
+
+.cartTotal {
+  text-align: right;
+  padding-right: 30px;
+  font-size: 1.5em;
 }

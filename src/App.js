@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import './index.css';
-import AddMovie from './components/AddMovie'
 import {Menu} from './components/Menu'
-import MovieList from './components/MovieList'
 
 
 class App extends Component {
@@ -11,7 +9,8 @@ class App extends Component {
     super(props)
 
     this.state = {
-      movieList : []
+      movieList : [],
+      cartList : []
     }
   }
 
@@ -19,7 +18,6 @@ class App extends Component {
     return (
       <div>
         <Menu />
-        <h1>Movies</h1>
         {this.props.children}
       </div>
     );
