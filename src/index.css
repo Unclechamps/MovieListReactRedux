@@ -29,3 +29,40 @@ h1 {
   align-items: center;
   margin: 20px;
 }
+
+/* Menu */
+
+.menu {
+  background-color: gray;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  padding: 15px;
+
+}
+
+.menu div {
+  padding: 15px;
+}
+
+.links {
+  display: flex;
+  margin-left: auto;
+  padding-bottom: 0;
+  padding-top: 0;
+}
+
+.logo {
+  margin: 0;
+  padding: 10px;
+  font-size: 1.5em;
+}
+
+.active {
+  background-color :black;
+}

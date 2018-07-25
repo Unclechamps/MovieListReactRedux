@@ -1,6 +1,6 @@
 
 const initialState = {
-    movieList : [],
+    movieList : [{title : "Jurassic Park", imageURL : 'https://upload.wikimedia.org/wikipedia/en/e/e7/Jurassic_Park_poster.jpg'}],
     titleNew : '',
     posterNew : ''
 }
