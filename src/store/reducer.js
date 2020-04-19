@@ -31,6 +31,11 @@ const reducer = (state = initialState, action) => {
         ...state,
         cartList : state.cartList.filter(movie => movie !== action.movie)
       }
+    case actionTypes.LIST_MOVIE:
+      return {
+          ...state.
+          movieList : json
+      }
     }
 
   return state

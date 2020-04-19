@@ -28,3 +28,10 @@ export const deleteCartMovie = (movie) => {
     movie : movie
   }
 }
+
+export const onPopulateList = (movie) => {
+  return {
+    type: actionTypes.LIST_MOVIE,
+    movie : movie
+  }
+}
